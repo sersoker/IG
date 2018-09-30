@@ -1,0 +1,24 @@
+#include "stdlib.h"
+#include "stdio.h"
+#include <GL/glut.h>
+#include <ctype.h>
+#include <vector>
+#include "objeto3d.h"
+
+#ifndef CUBO_H
+#define CUBO_H
+
+using namespace std;
+
+class Cubo: public Objeto3d{
+
+public:
+	// Funcion para mandar los datos desde un vector.
+	Cubo(){};
+	Cubo(const Cubo & obj);
+	Cubo(vector<GLfloat> & v,vector<GLint> & t,unsigned int n);
+		
+};
+#include "cubo.hxx"
+
+#endif

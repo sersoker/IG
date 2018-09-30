@@ -1,0 +1,54 @@
+#include "objeto3d.h"
+//******************************************************
+// Funcion para mandar los datos desde un vector.
+
+/*Objeto3d::Objeto3d(const Objeto3d & obj){
+	vertices=obj.vertices;
+	triangulos=obj.triangulos;
+	nTriangulos=obj.nTriangulos;
+}
+
+Objeto3d::Objeto3d(vector<GLfloat> & v,vector<GLint> & t,unsigned int n){
+	vertices=v;
+	triangulos=t;
+	nTriangulos=n;
+}
+*/
+//******************************************************
+//*********************Modificar************************	
+void Objeto3d::setVertices(vector<GLfloat> &v){
+	vertices=v;
+}
+
+void Objeto3d::setTriangulos(vector<GLint> &t){
+	triangulos=t;
+}
+
+void Objeto3d::setNTriangulos(int n){
+	nTriangulos=n;
+}
+
+
+
+//******************************************************
+//*********************Dibujar************************
+void Objeto3d::dibujar15(){
+	glBegin( GL_TRIANGLES ) ;
+		for( int i = 0	; i < nTriangulos*3 ; i++ ){
+			int valor=triangulos[i]*3;
+				glVertex3f(vertices[valor],vertices[valor+1],vertices[valor+2]);
+		}
+	glEnd() ;
+}
+
+void Objeto3d::dibujar20(){
+	glEnableClientState( GL_VERTEX_ARRAY ); // habilitar ’vertex arrays’
+	// especificar puntero a tabla de coords. de vértices
+	glVertexPointer( 3, GL_FLOAT, 0, &(vertices[0]) );
+	// dibujar usando vértices indexados
+	glDrawElements( GL_TRIANGLES, 3*nTriangulos, GL_UNSIGNED_INT, &(triangulos[0]) );
+ }
+
+bool Objeto3d::empty(){
+	return nTriangulos==0;
+}

@@ -1,0 +1,32 @@
+Autor: Bryan Moreno Picamán
+
+Instrucciones: Para ejecutar usar el comando "make".
+Abrir el ejecutable practica y en la ventana de comandos aparecerán las instrucciones.
+
+Formato de llamada: [Lado][ArchivoPLY/ArchivoPerfil(sin extension)]
+
+
+************Menú de acciones:*************
+AVISO: El archivo pasado como parametro se usa para ArchivoPLY y Revolucion
+
+Modo de dibujo:
+	Tecla 'p' - Modo Puntos
+	Tecla 'l' - Modo Lineas/aristas
+	Tecla 's' - Modo Solido
+	Tecla 'a' - Modo Ajedrez
+	
+Figura a dibujar:
+	Tecla '1' - PLY
+	Tecla '2' - Revolucion
+	Tecla '3' - Jerarquico
+	
+Opciones de Dibujo:
+	Tecla 'Z/z' - Primer grado de Libertad
+	Tecla 'X/x' - Segundo grado de Libertad
+	Tecla 'C/c' - Tercer grado de Libertad
+	Tecla '+/-' - Divisiones figura PLY
+	Tecla 'N/n' -  incrementa/decrementa la velocidad de modificación del segundo grado de libertad
+	Tecla 'M/m' -  incrementa/decrementa la velocidad de modificación del tercer grado de libertad
+	Tecla 'Q/q' - SALIR
+
+	

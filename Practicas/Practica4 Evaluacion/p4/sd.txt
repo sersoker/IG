@@ -1,0 +1,49 @@
+
+vector<GLfloat> Revolucion::calculaCoordenadasUniformesTextura(){
+  GLfloat distancia_actual = 0.0;
+  GLfloat distancia_maxima = 0.0;
+
+  int abajo_arriba;
+  if ( v_eje1[1] <= v_eje2[1] )//De abajo a arriba
+    abajo_arriba = 1;
+  else //Arriba a abajo
+    abajo_arriba = 0;
+
+  //Calculamos la distancia máxima
+    for (int i = 0; i < v_iniciales.size()-3; i+=3){
+      distancia_maxima += sqrt((v_iniciales[i]-v_iniciales[i+3])*(v_iniciales[i]-v_iniciales[i+3])
+        +(v_iniciales[i+1]-v_iniciales[i+4])*(v_iniciales[i+1]-v_iniciales[i+4]));
+    }
+  //Calculamos la Y del primer perfil
+  if (!abajo_arriba){
+    coordenadas_textura.push_back(0.0);
+    coordenadas_textura.push_back(0.0);
+    for (int i = 0; i < v_iniciales.size()-3; i+=3){
+      distancia_actual += sqrt((v_iniciales[i]-v_iniciales[i+3])*(v_iniciales[i]-v_iniciales[i+3])
+        +(v_iniciales[i+1]-v_iniciales[i+4])*(v_iniciales[i+1]-v_iniciales[i+4]));
+      coordenadas_textura.push_back(0.0);
+      coordenadas_textura.push_back(distancia_actual/distancia_maxima);
+    }
+  }
+  else{
+    coordenadas_textura.push_back(0.0);
+    coordenadas_textura.push_back(1.0);
+    for (int i = 0; i < v_iniciales.size()-3; i+=3){
+      distancia_actual += sqrt((v_iniciales[i]-v_iniciales[i+3])*(v_iniciales[i]-v_iniciales[i+3])
+        +(v_iniciales[i+1]-v_iniciales[i+4])*(v_iniciales[i+1]-v_iniciales[i+4]));
+      coordenadas_textura.push_back(0.0);
+      coordenadas_textura.push_back(1.0-distancia_actual/distancia_maxima);
+    }    
+  }
+  //Calculamos el valor de Y para los demás perfiles
+  for (int i = 1; i <= divisiones; i++){
+    for (int j = 0; j < num_vini; j++){
+      GLfloat nuevai = i;
+      GLfloat nuevadiv = divisiones;
+      coordenadas_textura.push_back(nuevai/nuevadiv);
+      coordenadas_textura.push_back(coordenadas_textura[j*2+1]);
+    }
+  }
+
+  return coordenadas_textura;
+}

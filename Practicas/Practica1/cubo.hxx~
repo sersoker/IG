@@ -1,0 +1,42 @@
+#include "cubo.h"
+
+//Constructores
+
+Cubo::Cubo(){
+	vertices.push_back(0.0);vertices.push_back(0.0);vertices.push_back(1.0);
+	vertices.push_back(1.0);vertices.push_back(0.0);vertices.push_back(1.0);
+	vertices.push_back(0.0);vertices.push_back(1.0);vertices.push_back(1.0);
+	vertices.push_back(1.0);vertices.push_back(1.0);vertices.push_back(1.0);
+	vertices.push_back(0.0);vertices.push_back(0.0);vertices.push_back(0.0);
+	vertices.push_back(1.0);vertices.push_back(0.0);vertices.push_back(0.0);
+	vertices.push_back(0.0);vertices.push_back(1.0);vertices.push_back(0.0);
+	vertices.push_back(1.0);vertices.push_back(1.0);vertices.push_back(0.0);
+
+	triangulos.push_back();triangulos.push_back();triangulos.push_back();
+	triangulos.push_back();triangulos.push_back();triangulos.push_back();
+	triangulos.push_back();triangulos.push_back();triangulos.push_back();
+	triangulos.push_back();triangulos.push_back();triangulos.push_back();
+	triangulos.push_back();triangulos.push_back();triangulos.push_back();
+	triangulos.push_back();triangulos.push_back();triangulos.push_back();
+	triangulos.push_back();triangulos.push_back();triangulos.push_back();
+	triangulos.push_back();triangulos.push_back();triangulos.push_back();
+	triangulos.push_back();triangulos.push_back();triangulos.push_back();
+	triangulos.push_back();triangulos.push_back();triangulos.push_back();
+	triangulos.push_back();triangulos.push_back();triangulos.push_back();
+	triangulos.push_back();triangulos.push_back();triangulos.push_back();
+
+	nTriangulos=12;
+}
+
+Cubo::Cubo(const Cubo & obj){
+	vertices=obj.vertices;
+	triangulos=obj.triangulos;
+	nTriangulos=obj.nTriangulos;
+}
+
+Cubo::Cubo(vector<GLfloat> &v,vector<GLint> &t,unsigned int n){
+	vertices=v;
+	triangulos=t;
+	nTriangulos=n;
+}
+

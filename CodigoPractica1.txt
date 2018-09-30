@@ -1,0 +1,21 @@
+double PI=3.141592653589793238463;
+
+void calculapuntos(double x1,double y1,double x2,double y2,double &x3,double &y3){
+	double dX = x2 - x1;
+	double dY = y2 - y1;
+
+	x3 = (cos(60*PI/180) * dX - sin(60*PI/180) * dY) + x1;
+	y3 = (sin(60*PI/180) * dX + cos(60*PI/180) * dY) + y1;
+}
+
+void hex(vector<double> &puntosx,vector<double> &puntosy ){
+
+	int i=0;
+	do{
+		calculapuntos(0,0,puntosx[i],puntosy[i],puntosx[i+1],puntosy[i+1]);
+		i++;
+	}while(i<6);
+
+}
+
+-------------------------------------------------------------------------

@@ -1,0 +1,30 @@
+Autor: Bryan Moreno Picamán
+
+Instrucciones: Para ejecutar usar el comando "make".
+Abrir el ejecutable practica y en la ventana de comandos aparecerán las instrucciones.
+
+Formato de llamada: [Lado][ArchivoPLY/ArchivoPerfil(sin extension)]
+
+
+************Menú de acciones:*************
+AVISO: El archivo pasado como parametro se usa para ArchivoPLY y Revolucion
+
+Modo de dibujo:
+Tecla 'V' - Dibujo15 (Por Defecto)
+Tecla 'N' - Dibujo20
+Tecla '+' - Aumentar numero de divisiones en Revolucion
+Tecla '-' - Disminuir numero de divisiones en Revolucion(minimo 4)
+
+Figura a dibujar:
+Tecla 'C' - Cubo
+Tecla 'T' - Tetraedro
+Tecla 'O' - Octaedro
+Tecla 'D' - Icosaedro
+Tecla 'A' - ArchivoPLY
+Tecla 'R' - Revolucion
+
+Opciones de Dibujo:
+Tecla '0' - Relleno (Por Defecto)
+Tecla '1' - Puntos
+Tecla '2' - Lineas
+Tecla '3' - Ajedrez (solo con modo de dibujo 'V')

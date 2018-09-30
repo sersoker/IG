@@ -1,0 +1,21 @@
+Autor: Bryan Moreno Picamán
+
+Instrucciones: Para ejecutar usar el comando "make", en la ventana de comandos aparecerán las instrucciones.
+************Menú de acciones:*************
+Modo de dibujo:
+Tecla 'V' - Dibujo15 (Por Defecto)
+Tecla 'N' - Dibujo20
+
+Figura a dibujar:
+Tecla 'C' - Cubo
+Tecla 'T' - Tetraedro
+Tecla 'O' - Octaedro
+Tecla 'D' - Icosaedro
+
+Opciones de Dibujo:
+Tecla '0' - Relleno (Por Defecto)
+Tecla '1' - Puntos
+Tecla '2' - Lineas
+Tecla '3' - Ajedrez (solo con modo de dibujo 'V')
+
+Tecla 'Q' - SALIR

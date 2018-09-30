@@ -1,0 +1,11 @@
+glPolygonMode(
+- GL_FRONT(se aplica a la parte frontal)
+- GL_BACK(se aplica a a parte trasera)
+- GL_FRONT_AND_BACK(se aplica a ambas)
+,
+- GL_POINTS
+- GL_LINES
+- GL_FILL
+)
+
+
